@@ -11,6 +11,18 @@
         <div class="container mt-4">
             <h1>О блоге</h1>
             <p>Эксперименты с Ларавелем на Хекслете</p>
+            <p>{{ implode(', ', $tags) }}</p>
+            <div class="main">
+
+                @extends('layouts.app')
+                
+                    @foreach ($team as $items)
+                        @foreach ($items as $value)
+                            {{ $value }} : 
+                        @endforeach
+                    @endforeach
+            </div>
+
         </div>
     </body>
 </html>

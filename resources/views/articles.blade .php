@@ -10,6 +10,9 @@
     <body>
         <div class="container mt-4">
             <h1>Статьи</h1>
+
+            @yield('content');
+
         </div>
     </body>
 </html>
