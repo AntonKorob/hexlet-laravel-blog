@@ -14,8 +14,13 @@
             <p>{{ implode(', ', $tags) }}</p>
             <div class="main">
 
-                @extends('layouts.app')
+                @extends('layouts.users')
                 
+                <h1>Laravel Quickstart</h1>
+
+                    @yield('content')
+
+
                     @foreach ($team as $items)
                         @foreach ($items as $value)
                             {{ $value }} : 
