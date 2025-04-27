@@ -1,27 +1,14 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'welcome']);
 
+Route::get('/about', [PageController::class, 'about'])->name('about', );
 
-Route::get('/about', function () {
-    $tags = ['обучение', 'программирование', 'php', 'oop'];    
-    $team = [
-        ['name' => 'Hodor', 'position' => 'programmer'],
-        ['name' => 'Joker', 'position' => 'CEO'],
-        ['name' => 'Elvis', 'position' => 'CTO'],
-    ];
+Route::get('/articles', [PageController::class, 'articles'])->name('articles');
 
-    return view('about', ['tags' => $tags], ['team' => $team]);
-})->name('about');
-
-Route::get('/articles',function () {
-    return view('layouts.users');
-})->name('articles');
-
-
+Route::get('/users', [PageController::class, 'users'])->name('users');
 
 
