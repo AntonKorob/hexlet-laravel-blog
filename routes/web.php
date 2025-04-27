@@ -18,8 +18,8 @@ Route::get('/about', function () {
     return view('about', ['tags' => $tags], ['team' => $team]);
 })->name('about');
 
-Route::get('/articles', function () {
-    return view('articles');
+Route::get('/articles',function () {
+    return view('layouts.users');
 })->name('articles');
 
 
