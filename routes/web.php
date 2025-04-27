@@ -11,4 +11,6 @@ Route::get('/articles', [PageController::class, 'articles'])->name('articles');
 
 Route::get('/users', [PageController::class, 'users'])->name('users');
 
+Route::get('/rating', [PageController::class, 'rating'])->name('rating');
+
 

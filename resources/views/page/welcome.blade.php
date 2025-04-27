@@ -2,6 +2,9 @@
 
 @section('title', 'Дом')
 
+@section('header', 'Дом')
+
+
 @section('content')
-    <h1>Hello my friends !!!</h1>
+    <h4>Hello my friends !!!</h4>
 @endsection

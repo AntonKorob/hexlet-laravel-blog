@@ -30,4 +30,8 @@ class PageController extends Controller
         return view('layouts.users');
     }
 
+    public function rating()
+    {
+        return view('page.rating');
+    }   
 }

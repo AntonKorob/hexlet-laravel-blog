@@ -13,12 +13,13 @@
             <a href="/about">About</a>
             <a href="/articles">Articles</a>
             <a href="/users">Users</a>
+            <a href="/rating">Rating</a>
             
             <h1>@yield('header')</h1>
 
             <div>@yield('content')</div>
 
-            <div class="menu">@yield('menu')</div>
+            <div>@yield('menu')</div>
 
         </div>
     </body>
