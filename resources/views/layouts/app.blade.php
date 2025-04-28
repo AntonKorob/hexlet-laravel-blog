@@ -19,6 +19,8 @@
 
             <div>@yield('content')</div>
 
+            <div>@yield('rating')</div>
+
             <div>@yield('menu')</div>
 
         </div>
