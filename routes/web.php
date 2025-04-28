@@ -27,4 +27,14 @@ Route::get('articles/{id}', [ArticleController::class, 'show'])->name('articles.
 Route::get('/article_categories/{id}', [ArticleCategoryController::class, 'show'])
     ->name('article_categories.show');
 
-    
+Route::get('/articles/create', [ArticleController::class, 'create'])
+    ->name('articles.create');   
+
+Route::post('articles', [ArticleController::class, 'store'])
+    ->name('articles.store');
+
+Route::get('articles/{id}/edit', [ArticleController::class, 'edit'])
+    ->name('articles.edit');
+
+Route::patch('articles/{id}', [ArticleController::class, 'update'])
+    ->name('articles.update');

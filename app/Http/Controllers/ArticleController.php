@@ -36,4 +36,42 @@ class ArticleController extends Controller
             'searchQuery' => $request->input('q', '')
         ]);
     }
+
+    public function create()
+    {
+        $article = new Article();
+        return view('article.create', compact('article'));
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required|unique:articles',
+            'body' => 'required|min:100',
+        ]);
+
+        $article = new Article();
+        $article->fill($data);
+        $article->save();
+
+        $article->name = $request->input('name');
+        $article->body = $request->input('body');
+
+        return redirect()
+            ->route('articles.index');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $article = Article::findOrFail($id);
+        $data = $request->validate([
+            'name' => "required|unique:articles,name,{$article->id}",
+            'body' => 'required|min:100',
+        ]);
+
+        $article->fill($data);
+        $article->save();
+        return redirect()
+            ->route('articles.index');
+    }
 }
