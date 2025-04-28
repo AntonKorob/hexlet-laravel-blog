@@ -7,3 +7,6 @@ make setup bootstrap:
 	npm install bootstrap-icons --save-dev
 	npm install
 	npm run build
+	composer require spatie/laravel-html
+make tinker:
+	php artisan tinker

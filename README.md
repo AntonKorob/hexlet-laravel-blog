@@ -33,8 +33,13 @@ php artisan ui bootstrap --auth
 npm install bootstrap-icons --save-dev
 npm install
 npm run build
-```
+composer require spatie/laravel-html
 
+```
+```tinker
+make tinker
+php artisan tinker
+```
 ## Run
 
 ```bash

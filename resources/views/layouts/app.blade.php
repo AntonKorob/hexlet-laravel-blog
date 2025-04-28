@@ -93,10 +93,18 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+        <div class="fom_serch m-2 p-2">
+            {{  html()->form('GET', route('articles.index'))->open() }}
+                {{  html()->input('text', 'name') }}
+                {{  html()->submit('Search') }}
+            {{ html()->form()->close() }}
+        </div>
+        <main class="py-4 m-2">
             @yield('content')
         </main>
     </div>
+   
+
+
 </body>
 </html>
