@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\ArticleController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,4 @@ Route::get('/users', [PageController::class, 'users'])->name('users');
 
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 
-
+Route::get('articles_d', [ArticleController::class, 'index'])->name('articles.index');
