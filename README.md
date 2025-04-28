@@ -27,7 +27,12 @@ DB_PASSWORD=password
 ```
 
 ```bash
-make setup
+make setup bootstrap
+composer require laravel/ui --dev
+php artisan ui bootstrap --auth
+npm install bootstrap-icons --save-dev
+npm install
+npm run build
 ```
 
 ## Run
