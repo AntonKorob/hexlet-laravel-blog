@@ -18,6 +18,8 @@ Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 
+Route::get('articles', [ArticleController::class, 'search'])->name('articles.index');
+
 Auth::routes();
 
 Route::get('articles/{id}', [ArticleController::class, 'show'])->name('articles.show');

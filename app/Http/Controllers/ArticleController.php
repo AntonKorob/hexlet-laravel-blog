@@ -20,4 +20,20 @@ class ArticleController extends Controller
 
         return view('article.show', compact('article'));
     }
+    public function search(Request $request)
+    {
+        $query = Article::query();
+        
+        if ($request->has('q')) {
+            $searchTerm = $request->input('q');
+            $query->where('name', 'ilike', "%{$searchTerm}%");
+        }
+        
+        $articles = $query->paginate(5);
+        
+        return view('article.index', [
+            'articles' => $articles,
+            'searchQuery' => $request->input('q', '')
+        ]);
+    }
 }
