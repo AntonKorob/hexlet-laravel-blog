@@ -67,5 +67,8 @@
     </div>
     @endif
 
+    <a href="..." data-confirm="Вы уверены?" data-method="delete" rel="nofollow">Удалить</a>
+
+    <input type="submit" value="Сохранить" data-disable-with="Сохраняем">
 
 @endsection

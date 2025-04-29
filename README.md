@@ -31,11 +31,22 @@ make setup bootstrap
 composer require laravel/ui --dev
 php artisan ui bootstrap --auth
 npm install bootstrap-icons --save-dev
-npm install
 npm run build
 composer require spatie/laravel-html
+# Убедитесь в том, что у вас установлена Node.js
+node -v
+# Установите зависимости
+npm install @rails/ujs
+# Для установки остальных пакетов
+npm install
+npm run dev
 
 ```
+<!-- добавьте в конец файла resources/js/app.js строчки: -->
+
+import ujs from '@rails/ujs';
+ujs.start()
+
 ```tinker
 make tinker
 php artisan tinker
